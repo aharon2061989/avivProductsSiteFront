@@ -1,0 +1,79 @@
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 כרטיסיות בשורה תמיד */
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.productCard {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  width: 90%;
+  background-color: black;
+  color: white;
+}
+
+.productCard:hover {
+  transform: scale(1.05);
+}
+
+.productImage {
+  width: 75%;
+  height: auto;
+  max-height: 250px; 
+  object-fit:fill;
+  border-radius: 10px;
+}
+
+.productName {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.productPrice {
+  font-size: 2rem;
+  font-weight: bold;
+  color: gold;
+}
+
+@media (max-width: 1024px) {
+  .productsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 טורים */
+  }
+
+  .productName {
+    font-size: 1rem;
+  }
+
+  .productPrice {
+    font-size: 1.2rem;
+  }
+}
+
+/* למסכים קטנים מאוד (מכשירים ניידים) - טור אחד */
+@media (max-width: 600px) {
+  .productsGrid {
+    grid-template-columns: repeat(1, minmax(0, 1fr)); /* 1 טור */
+  }
+
+  .productCard {
+    padding: 10px;
+  }
+
+  .productImage {
+    max-height: 180px;
+  }
+
+  .productName {
+    font-size: 0.9rem;
+  }
+
+  .productPrice {
+    font-size: 1rem;
+  }
+}
