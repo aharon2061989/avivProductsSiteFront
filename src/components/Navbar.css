@@ -1,15 +1,17 @@
 .navbar {
-    background-color: #2c3e50;
+    background-color: #333; 
     width: 100%;
     height: 50px;
     display: flex;
     align-items: center; 
+    text-align: center;
     justify-content: space-between; 
-    padding: 10px 10px;
+    padding: 10px 10px; 
     box-sizing: border-box;
+    direction: ltr;
 }
 
-.icons {
+.links {
     display: flex;
     align-items: baseline; 
     gap: 10px; 
@@ -17,6 +19,18 @@
 
 .gallery {
     text-decoration: none;
-    color: white;
-    font-size: 28px;
+    color: gold;
+    font-size: 25px;
+    margin-right: 10px;
 }
+
+.icons {
+    display: flex;
+    align-items: baseline; 
+    gap: 15px; 
+}
+
+.icon {
+    color: gold;
+}
+

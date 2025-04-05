@@ -1,39 +1,27 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, IconButton, Stack, Button } from "@mui/material";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import PhoneIcon from "@mui/icons-material/Phone";
+import "./Navbar.css";
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
-function Navbar() {
+function Navbar2() {
     return (
-        <AppBar position="static" color="primary">
-            <Toolbar>
-                <Typography variant="h5" sx={{ flexGrow: 1 }}>
-                קוקטיילי – כי כל קוקטייל צריך את הכוס שלו
-                </Typography>
+        <nav className="navbar">
+            <div className="icons">
+                    <a href="https://www.facebook.com/profile.php?id=61574411304742" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebook} size="2xl" style={{color: "#1877F7"}} /></a>
+                    <a href="https://www.instagram.com/aviv141989" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} size="2xl" style={{color: "#f773c7"}} /></a>
+                    <a href="tel:0504066900">
+                        <FontAwesomeIcon icon={faPhone} size="xl" style={{ color: "green" }} />
+                    </a> 
+            </div>
 
-                <Button style={{fontWeight:'bold', marginRight:'5px'}} color="inherit" href="/contact">גלריית תמונות</Button>
-
-                <Stack direction="row" spacing={2}>
-                    <IconButton
-                        color="inherit"
-                        href="https://wa.me/0504066900"
-                        target="_blank"
-                        aria-label="WhatsApp"
-                    >
-                        <WhatsAppIcon />
-                    </IconButton>
-
-                    <IconButton
-                        color="inherit"
-                        href="tel:0504066900"
-                        aria-label="Phone"
-                    >
-                        <PhoneIcon />
-                    </IconButton>
-                </Stack>
-            </Toolbar>
-        </AppBar>
+            <div className="links">
+                <Link to="/gallery" className="gallery">גלריה</Link>
+                <Link to="/" className="gallery">דף הבית</Link>
+            </div>
+        </nav>
     );
 }
 
-export default Navbar;
+export default Navbar2;
