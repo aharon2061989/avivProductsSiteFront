@@ -21,7 +21,7 @@ function Footer() {
                 <div className="footerSection">
                     <h4>קישורים חשובים</h4>
                     <ul>
-                        <li><Link to="/HomePage" onClick={scrollToTop}>עמוד הבית</Link></li>
+                        <li><Link to="/" onClick={scrollToTop}>עמוד הבית</Link></li>
                         <li><Link to="/Accessibility" onClick={scrollToTop}>הצהרת נגישות</Link></li>
                         <li><Link to="/PhotoGallery" onClick={scrollToTop}>גלריית תמונות</Link></li>
 
